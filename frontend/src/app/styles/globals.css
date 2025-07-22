@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  @apply scroll-smooth;
+}
+
+body {
+  @apply min-h-screen antialiased;
+}
+
+@layer utilities {
+  .shimmer {
+    background: linear-gradient(90deg, #fcfdff 0%, #f2f6ff 50%, #fcfdff 100%);
+    background-size: 200% 100%;
+    animation: shimmerMove 1.5s infinite linear;
+  }
+
+  @keyframes shimmerMove {
+    0% {
+      background-position: -100% 0;
+    }
+    100% {
+      background-position: 100% 0;
+    }
+  }
+}
+
+@layer utilities {
+  .shimmer {
+    background: linear-gradient(90deg, #fbfcff 0%, #f0f4ff 50%, #fbfcff 100%);
+    background-size: 200% 100%;
+    animation: shimmerMove 1.5s infinite linear;
+  }
+
+  @keyframes shimmerMove {
+    0% {
+      background-position: -100% 0;
+    }
+    100% {
+      background-position: 100% 0;
+    }
+  }
+}
